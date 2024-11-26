@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
+  
+    <!-- Diretório com os testes -->
+    <testsuites>
+        <testsuite name="WordPress Theme Tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Configurações globais de PHP -->
+    <php>
+        <!-- Ativar exibição de erros -->
+        <ini name="display_errors" value="1"/>
+        <ini name="error_reporting" value="-1"/>
+        
+        <!-- Variáveis de ambiente -->
+        <env name="WP_ENVIRONMENT_TYPE" value="testing"/>
+        <env name="DB_NAME" value="wordpress_test"/>
+        <env name="DB_USER" value="root"/>
+        <env name="DB_PASSWORD" value=""/>
+        <env name="DB_HOST" value="127.0.0.1"/>
+        <env name="WP_DEBUG" value="true"/>
+    </php>
+
+    <!-- Filtros para cobertura de código -->
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+
+    <!-- Configurações de cobertura de código -->
+    <coverage processUncoveredFiles="true">
+        <report>
+            <html outputDirectory="build/coverage-html"/>
+            <clover outputFile="build/logs/clover.xml"/>
+            <text/>
+        </report>
+    </coverage>
+</phpunit>

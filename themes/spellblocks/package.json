@@ -1,0 +1,14 @@
+{
+  "name": "spellblocks",
+  "version": "1.0.0",
+  "description": "A The Creators product",
+  "main": "index.js",
+  "devDependencies": {
+    "@wordpress/scripts": "^30.5.1"
+  },
+  "scripts": {
+    "test": "php ./vendor/bin/pest"
+  },
+  "author": "",
+  "license": "ISC"
+}

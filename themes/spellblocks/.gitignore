@@ -1,0 +1,30 @@
+# Arquivos gerados pelo WordPress
+*.log
+*.sql
+*.tar.gz
+
+# Arquivos de banco de dados
+*.sql
+
+# Diretórios de instalação do Composer
+/vendor/
+composer.lock
+
+# IDE e configurações locais
+.idea/
+.vscode/
+*.swp
+
+# Arquivos de dependências do Node.js (caso use)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Arquivos de build de frontend (caso use ferramentas como Webpack ou Gulp)
+dist/
+# build/
+
+# Outros arquivos de sistema
+.DS_Store
+Thumbs.db
